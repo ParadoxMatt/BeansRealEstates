@@ -21,7 +21,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="listings.html">Listings</a></li>
             <li><a href="#about-section">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" id="contact-us-button">Contact Us</a></li>
         </ul>
 
     </header>
@@ -127,21 +127,58 @@
     </section>
 
 
-    <!--CONTACT US POPUP-->
-    <section id="contact-us">
+<!-- CONTACT POPUP -->
 
-        <div>
-            <p>
+<section id="contact-us">
 
-            </p>
+    <!-- LEFT SIDE -->
+    <div class="contact-text">
+
+        <h2>Stay Connected</h2>
+
+        <p>
+            To keep up with all the latest property updates,
+            offers and listings please consider subscribing
+            to our newsletter.
+        </p>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" placeholder="Name">
         </div>
-        <div>
-            <input type="text" placeholder="Name" id="input-field">
-            <input type="text" placeholder="Email" id="input-field">
-            <input type="checkbox" name="Newsletter" id="Newsletter">Newsletter
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email">
         </div>
 
-    </section>
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Enter your number">
+        </div>
+
+        <div class="newsletter-row">
+
+            <div class="checkbox-group">
+                <input type="checkbox" name="Newsletter" id="Newsletter">
+
+                <span>Newsletter</span>
+            </div>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- FOOTER -->
     <footer>

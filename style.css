@@ -34,6 +34,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 3.5px #0c8f3f solid;
 }
 
 .logo h2 {
@@ -455,18 +456,173 @@ body {
     transform: scale(1.05);
 }
 
-#contact-us{
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease-in-out;
+/* =========================
+   CONTACT POPUP
+========================= */
 
-    height: 50vh;
-    width: 480px;
-    display: flex;
-    position: absolute;
+#contact-us {
+    width: 900px;
+    max-width: 95%;
+    min-height: 520px;
+    background: #f3f3f3;
+    border-radius: 28px;
+    display: none;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
 }
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact-text {
+    width: 40%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)),
+        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop');
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+.contact-text::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.contact-form {
+    width: 60%;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* =========================
+   INPUT GROUPS
+========================= */
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group label {
+    color: #0c8f3f;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 3px rgba(12, 143, 63, 0.2);
+}
+
+/* =========================
+   NEWSLETTER ROW
+========================= */
+
+.newsletter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox-group input {
+    width: 20px;
+    height: 20px;
+    accent-color: #0c8f3f;
+}
+
+.checkbox-group span {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.newsletter-row button {
+    padding: 16px 40px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #0c8f3f;
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.newsletter-row button:hover {
+    background: #086b2f;
+    transform: translateY(-3px);
+}
+
 
 
 /* =========================
@@ -487,46 +643,3 @@ footer h3 {
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
-
-@media(max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    #navlinks {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .search-container {
-        flex-direction: column;
-        border-radius: 20px;
-    }
-
-    .filter-btn {
-        width: 100%;
-    }
-
-    .property-details {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .section-header h2,
-    .featured h2,
-    .about-content h2,
-    .cta-content h2 {
-        font-size: 2rem;
-    }
-}
