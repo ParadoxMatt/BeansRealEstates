@@ -17,10 +17,12 @@ body {
     background: #f5f7fa;
     color: #222;
     overflow-x: hidden;
+    margin-top: 85px;
 }
 
 body.popupbg{
     overflow: hidden;
+    transition: 1s;
 }
 
 body.popupbg::before {
@@ -37,6 +39,18 @@ body.popupbg::before {
     background: rgba(0, 0, 0, 0.6);
 
     z-index: 998;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
 }
 
 /* =========================
@@ -476,6 +490,22 @@ body.popupbg::before {
     transform: scale(1.05);
 }
 
+#contactbutton{
+    padding: 16px 36px;
+    border: none;
+    background: white;
+    color: #0c8f3f;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    margin-top: 30px;
+}
+
+#contactbutton:hover {
+    transform: scale(1.05);
+}
+
 /* =========================
    CONTACT POPUP
 ========================= */
@@ -494,22 +524,31 @@ body.popupbg::before {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
+    transition: .5s ease;
 }
 
 #contactus.active{
     display: flex;
+    transition: .7s ease-in;
 }
 
 #closepopup{
     height: 35px;
     width: 35px;
     background-color: #0c8f3f;
+    border: none;
     border-radius: 5px;
     color: #ffffff;
     align-self: flex-end;
     align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: -25px;
 }
 
+#closepopup:hover {
+    transform: scale(1.05);
+}
 /* =========================
    LEFT SIDE
 ========================= */

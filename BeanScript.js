@@ -1,3 +1,5 @@
+//CONTACT US
+
 const contactbtn = document.getElementById("contactbutton");
 const popup = document.getElementById("contactus");
 const closepopup = document.getElementById("closepopup");
@@ -16,3 +18,9 @@ closepopup.addEventListener('click', () => {
     bodybg.classList.remove("popupbg");
 
 });
+
+//FILTERS
+
+//SEARCH
+
+//EMAIL
